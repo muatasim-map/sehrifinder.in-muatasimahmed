@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sehri Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Existing Fonts + New Brief Fonts + Arabic Fonts (Amiri, Aref Ruqaa) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Montserrat:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- 
+      Tailwind Configuration
+    -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Existing colors (maintained for app compatibility)
+              primary: '#1a4d2e',
+              'primary-dark': '#0f2e1c',
+              
+              // New Editorial Palette
+              emerald: {
+                midnight: '#0A2E23', // Darkest backgrounds
+                sacred: '#1B4D3E',   // Primary sections
+                forest: '#2D5F4F',   // Mid-tones
+                sage: '#4A7C6B',     // Lighter accents
+              },
+              gold: {
+                DEFAULT: '#d4af37',
+                antique: '#B8860B',  // Old-world richness
+                lantern: '#D4AF37',  // Primary accent
+                amber: '#F4A460',    // Glow effects
+                highlight: '#FFD700',// Emphasis
+                light: '#f0e6d2',
+              },
+              neutral: {
+                moonlight: '#F5F3EE', // Text backgrounds
+                pearl: '#FDFBF7',     // Lightest elements
+                charcoal: '#1F1F1F',  // Deep text
+                ivory: '#E8E6DF',     // Dividers
+              },
+              
+              // Aliases for existing app components
+              cream: '#faf8f3',
+              'cream-dark': '#f5f1e8',
+              'gold-bright': '#FFD700',
+              'gold-highlight': '#FFF9C4',
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'], // App UI
+              serif: ['Cormorant Garamond', 'serif'], // App Headings
+              brand: ['Cinzel', 'serif'], // App Logo
+              script: ['Great Vibes', 'cursive'], // App Accents
+              
+              // Landing Page Typography
+              'landing-heading': ['Playfair Display', 'serif'],
+              'landing-subhead': ['Lora', 'serif'],
+              'landing-body': ['Source Serif 4', 'serif'],
+              'landing-accent': ['Montserrat', 'sans-serif'],
+              
+              // Arabic Fonts
+              'arabic-calligraphy': ['"Aref Ruqaa"', 'serif'],
+              'arabic-text': ['"Amiri"', 'serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for horizontal scrolling areas */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        background-color: #faf8f3;
+        margin: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
